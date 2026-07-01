@@ -83,6 +83,7 @@
       if (val == null) break;
       val = val[parts[i]];
     }
+    console.log('key: ', key, ' value: ', value)
     if (typeof val !== 'string') return '[' + key + ']';
     return _interpolate(val, params);
   };
@@ -144,6 +145,7 @@
       xhr.send();
       if (xhr.status === 200) {
         _translations = JSON.parse(xhr.responseText);
+        console.log('translartions: ', _translations)
       } else {
         console.warn('[i18n] Failed to load locale ' + _currentLang + ' (' + xhr.status + '), falling back to ' + DEFAULT_LANG);
         // Retry with default language
