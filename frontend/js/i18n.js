@@ -83,7 +83,7 @@
       if (val == null) break;
       val = val[parts[i]];
     }
-    console.log('key: ', key, ' value: ', value)
+    console.log('key: ', key, ' value: ', val)
     if (typeof val !== 'string') return '[' + key + ']';
     return _interpolate(val, params);
   };
