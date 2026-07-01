@@ -172,6 +172,7 @@
         var el = els[i];
         var key = el.getAttribute('data-i18n');
         if (key) el.textContent = __(key);
+        console.log('el: ', el, ' key: ', key, ' textContent: ', el.textContent)
       }
 
       // data-i18n-attr="attrName|key" → set attribute
